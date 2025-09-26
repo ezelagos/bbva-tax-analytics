@@ -1,0 +1,24 @@
+# Entorno virtual
+.venv/
+.env/
+
+# Datos (pesados, se regeneran)
+data/raw/
+data/processed/
+
+# Logs
+logs/
+
+# Archivos Power BI
+bi/*.pbix
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Otros
+*.log
+*.tmp
+.DS_Store
+.vscode/
+

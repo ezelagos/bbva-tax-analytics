@@ -1,0 +1,42 @@
+# =========================
+# 🔹 Sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🔹 Python / Virtual envs
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.env
+
+# =========================
+# 🔹 Logs y temporales
+# =========================
+logs/
+*.log
+*.tmp
+*.out
+
+# =========================
+# 🔹 Datos (no versionar pesados)
+# =========================
+data/raw/
+data/processed/
+data/*/tmp/
+
+# =========================
+# 🔹 Archivos específicos
+# =========================
+logs/cuit_generados.csv
+
+# =========================
+# 🔹 Business Intelligence
+# =========================
+bi/*.pbix
+bi/*.pbip
+~$*.pbix  # backups temporales de Power BI

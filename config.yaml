@@ -1,0 +1,99 @@
+# ========================================
+# CONFIGURACIÓN DEL PROYECTO BBVA TAX ANALYTICS
+# ========================================
+
+project:
+  name: "BBVA Tax Analytics"
+  version: "1.0"
+  author: "Lagos, Ezequiel"
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  logs: "logs"
+  docs: "docs"
+  sql: "sql"
+  bi: "bi"
+
+etl:
+  input_files:
+    loans: "loans.csv"
+    iibb_ref: "ref_alicuotas_iibb.csv"
+    iva_ref: "ref_iva_servicios.csv"
+  output_files:
+    consolidated: "DDJJ_consolidado.csv"
+    iibb_detail: "DDJJ_IIBB_detalle.csv"
+    iva_detail: "DDJJ_IVA_detalle.csv"
+    imputaciones: "imputaciones.csv"
+
+logging:
+  level: "INFO"        # DEBUG | INFO | WARNING | ERROR
+  log_file: "logs/etl_tax.log"
+
+powerbi:
+  pbix_file: "bi/impuestos.pbix"
+  dashboards:
+    impuestos: "Impuestos Totales"
+    iibb: "Ingresos Brutos (IIBB)"
+    iva: "Impuesto al Valor Agregado (IVA)"
+
+quality_checks:
+  - check: "Valores nulos"
+    action: "Reportar y eliminar si > 90%"
+  - check: "Duplicados"
+    action: "Eliminar duplicados exactos"
+  - check: "Tipos de datos"
+    action: "Validar contra esquema esperado"
+
+schemas:
+  loans:
+    required_columns:
+      - id
+      - loan_amnt
+      - funded_amnt
+      - funded_amnt_inv
+      - term
+      - int_rate
+      - installment
+      - grade
+      - sub_grade
+      - emp_title
+      - emp_length
+      - home_ownership
+      - annual_inc
+      - verification_status
+      - loan_status
+      - purpose
+      - addr_state
+      - dti
+      - fico_range_low
+      - fico_range_high
+      - revol_bal
+      - revol_util
+      - total_acc
+      - issue_d
+  iibb_ref:
+    required_columns:
+      - regimen
+      - alicuota
+      - provincia
+  iva_ref:
+    required_columns:
+      - regimen
+      - servicio
+      - alicuota
+  ddjj_consolidado:
+    required_columns:
+      - periodo
+      - Año_txt
+      - Mes_txt
+      - Fecha
+      - AñoMes
+      - importe
+      - regimen
+      - Importe Normalizado
+      - AñoMes_Num
+
+metadata:
+  last_updated: "2025-09-19"
+  notes: "Archivo central de configuración del proyecto ETL + BI con validación de columnas"
