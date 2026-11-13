@@ -6,7 +6,10 @@ from datetime import datetime
 # =========================
 # Configuración
 # =========================
-RAW = r"C:\Users\Eze\Desktop\bbva-tax-analytics\data\raw"
+from pathlib import Path
+ROOT = Path(__file__).resolve().parents[1]
+
+RAW = str(ROOT / "data" / "raw")
 LOGDIR = "logs"
 os.makedirs(LOGDIR, exist_ok=True)
 

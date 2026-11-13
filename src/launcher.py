@@ -246,7 +246,7 @@ def main_menu():
     while True:
         print(
             """
-.....== LAUNCHER BBVA TAX .....==
+.....== LAUNCHER BANK TAX .....==
 [1] Ejecutar ETL (interactivo: elegir paths y CSV)
 [2] Ejecutar ETL rápido (por defecto)
 [3] Mostrar rutas por defecto

@@ -1,7 +1,7 @@
-# BBVA Tax Analytics: ETL + SQL + BI
+# Bank Tax Analytics: ETL + SQL + BI
 
 Este proyecto implementa un **pipeline de datos fiscales** inspirado en casos reales de bancos y organismos tributarios en Argentina.  
-El objetivo es integrar, limpiar y analizar información de **IVA** e **Ingresos Brutos (IIBB)**, simulando un entorno corporativo (ej. BBVA).  
+El objetivo es integrar, limpiar y analizar información de **IVA** e **Ingresos Brutos (IIBB)**, simulando el entorno de un banco o un área impositiva corporativa.  
 
 Se utilizan herramientas de **Python (ETL)**, **SQL (Teradata style)** y **Power BI** para análisis visual.
 
@@ -9,7 +9,7 @@ Se utilizan herramientas de **Python (ETL)**, **SQL (Teradata style)** y **Power
 
 ## Estructura del proyecto
 
-bbva-tax-analytics/
+bank-tax-analytics/
 ├── bi/ # Dashboards en Power BI
 │ └── impuestos.pbix
 ├── config.yaml # Configuración del pipeline
@@ -41,7 +41,7 @@ Copiar código
 - **Python 3.10**
   - `pandas`, `numpy` → procesamiento de datos  
   - `pyyaml` → configuración del pipeline  
-  - `sqlalchemy` → consultas SQL (simulación Teradata/BBVA)  
+  - `sqlalchemy` → consultas SQL (simulación de entorno Teradata)  
   - `pyarrow` / `fastparquet` → almacenamiento en parquet  
 - **SQL** → reglas de negocio, queries estilo Teradata  
 - **Power BI** → visualización de métricas y KPIs  
@@ -87,8 +87,8 @@ En **Power BI** (`bi/impuestos.pbix`) se analizan:
 
 ### 1. Clonar el repo
 ```bash
-git clone https://github.com/ezelagos/bbva-tax-analytics.git
-cd bbva-tax-analytics
+git clone https://github.com/ezelagos/bank-tax-analytics.git
+cd bank-tax-analytics
 ### 2. Crear y activar entorno
 bash
 Copiar código

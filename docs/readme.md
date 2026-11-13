@@ -1,4 +1,4 @@
-# BBVA Tax Analytics (Demo)
+# Bank Tax Analytics (Demo)
 Pipeline ETL en Python para calcular IVA e IIBB a partir de préstamos. Incluye:
 - Imputación controlada y trazable (logs/imputaciones.csv)
 - CUIT sintético y fallback seguro

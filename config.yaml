@@ -1,9 +1,9 @@
 # ========================================
-# CONFIGURACIÓN DEL PROYECTO BBVA TAX ANALYTICS
+# CONFIGURACIÓN DEL PROYECTO BANK TAX ANALYTICS
 # ========================================
 
 project:
-  name: "BBVA Tax Analytics"
+  name: "Bank Tax Analytics"
   version: "1.0"
   author: "Lagos, Ezequiel"
 

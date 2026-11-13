@@ -1,4 +1,5 @@
 import os, logging
+from pathlib import Path
 import pandas as pd
 from util_tax import (
     load, clean_df, clean_dates, normalize_types, prep,
@@ -6,8 +7,9 @@ from util_tax import (
 )
 
 # Config
-OUT = r"C:\Users\Eze\Desktop\bbva-tax-analytics\data\processed"
-LOGDIR = r"C:\Users\Eze\Desktop\bbva-tax-analytics\logs"
+ROOT = Path(__file__).resolve().parents[1]
+OUT = str(ROOT / "data" / "processed")
+LOGDIR = str(ROOT / "logs")
 FAST_MODE = False
 
 logging.basicConfig(
